@@ -244,3 +244,35 @@ section {
     border-color: #38bdf8;
 }
 
+
+/* Desktop Mouse Hover */
+#services article:hover,
+#projects article:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
+    border-color: #38bdf8;
+}
+
+/* Mobile Touch */
+#services article:active,
+#projects article:active {
+    transform: scale(0.97);
+    box-shadow: 0 5px 20px rgba(56, 189, 248, 0.2);
+}
+
+/* Buttons */
+#contact a,
+#social a {
+    transition: all 0.3s ease;
+}
+
+#contact a:hover,
+#social a:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.3);
+}
+
+#contact a:active,
+#social a:active {
+    transform: scale(0.95);
+}
