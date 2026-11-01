@@ -299,17 +299,3 @@ section {
     }
 }
 
-
-/* Fix Scroll Reveal Animation */
-
-.reveal {
-    animation: none !important;
-    opacity: 0 !important;
-    transform: translateY(35px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.reveal.show {
-    opacity: 1 !important;
-    transform: translateY(0);
-}
