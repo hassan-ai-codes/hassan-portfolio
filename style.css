@@ -149,3 +149,21 @@ footer {
         padding: 0 12px;
     }
 }
+#contact a,
+#social a {
+    display: inline-block;
+    background: #38bdf8;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+#contact a:hover,
+#social a:hover {
+    background: #0284c7;
+    transform: translateY(-3px);
+}
