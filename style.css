@@ -189,3 +189,42 @@ footer {
 #services article h3 {
     color: #38bdf8 !important;
 }
+
+
+/* Portfolio Animations */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header animation */
+header {
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* Sections animation */
+section {
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* Service cards animation */
+#services article {
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    header,
+    section,
+    #services article {
+        animation: none;
+    }
+}
