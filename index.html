@@ -151,6 +151,44 @@ const observer = new IntersectionObserver((entries) => {
 revealElements.forEach((element) => {
     observer.observe(element);
 });
+// Animated Skill Percentage Counters
+
+const skillSection = document.querySelector("#skills");
+const skillPercentages = document.querySelectorAll(".skill p span");
+
+const skillCounterObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+
+            skillPercentages.forEach((span) => {
+                const target = parseInt(span.textContent);
+                let current = 0;
+
+                const duration = 1500;
+                const increment = target / (duration / 16);
+
+                function updateCounter() {
+                    current += increment;
+
+                    if (current < target) {
+                        span.textContent = Math.floor(current) + "%";
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        span.textContent = target + "%";
+                    }
+                }
+
+                updateCounter();
+            });
+
+            skillCounterObserver.unobserve(skillSection);
+        }
+    });
+}, {
+    threshold: 0.3
+});
+
+skillCounterObserver.observe(skillSection);
 </script>
 
 </body>
